@@ -1,6 +1,6 @@
 # Bidirectional Folgezettel Plugin for Obisidian
 
-![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.2&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.1&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 Automatic folgezettel backlink generation for Obsidian notes with bidirectional cross-linking. This plugin is a TypeScript translation of the `org-roam-folgezettel.el` Emacs package by Blaine Mooers.
 
@@ -54,11 +54,11 @@ make install-plugin VAULT_PATH=/path/to/your/vault
 
 ### Commands
 
-| Command | Description |
-|---------|-------------|
-| **Add backlink to parent note** | Creates bidirectional link with parent |
-| **Create next child note** | Creates a new child note with suggested address |
-| **Suggest next child address** | Shows the next available child address |
+| Command | Description | Suggested keybinding |
+|---------|-------------|----------------------|
+| **Add backlink to parent note** | Creates bidirectional link with parent | Option-P |
+| **Create next child note** | Creates a new child note with suggested address | Option-C |
+| **Suggest next child address** | Shows the next available child address | Option-A |
 
 ### Keyboard Shortcuts
 
@@ -156,9 +156,15 @@ bidirectional-folgezettel/
 5. Push: `git push origin feature/name`
 6. Open a Pull Request
 
-## License
+## Update history
 
-MIT License - see [LICENSE](LICENSE) file.
+|Version      | Changes                                                                                                                                    | Date                 |
+|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
+| Version 0.1 |  Extensive edits of the README.md.                                                                        | 2026 January 15           |
+
+## Funding
+- NIH: R01 CA242845, R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel); P30GM145423 (PI: A. West)
 
 
 
