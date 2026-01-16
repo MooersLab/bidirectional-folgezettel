@@ -1,4 +1,4 @@
-# Bidirectional Folgezettel Plugin
+# Bidirectional Folgezettel Plugin for Obisidian
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -160,10 +160,7 @@ bidirectional-folgezettel/
 
 MIT License - see [LICENSE](LICENSE) file.
 
-## Credits
 
-- **Original Author**: Blaine Mooers - [`org-roam-folgezettel.el`](https://github.com/MooersLab/org-roam-folgezettel)
-- **Inspiration**: Niklas Luhmann's Zettelkasten methodology
 
 ---
 
