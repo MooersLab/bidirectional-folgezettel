@@ -6,7 +6,7 @@ Automatic folgezettel backlink generation for Obsidian notes with bidirectional 
 
 ## What is Folgezettel?
 
-Folgezettel is a hierarchical note-addressing system from Niklas Luhmann's Zettelkasten methodology. Notes receive structured addresses like `1.2a3c5` that encode relationships:
+Folgezettel is a hierarchical note-addressing system derived from Niklas Luhmann's Zettelkasten methodology. This variant indexing system is computer filename friendly. Notes receive structured addresses like `1.2a3c5` that encode relationships:
 
 | Address | Meaning |
 |---------|---------|
@@ -14,7 +14,12 @@ Folgezettel is a hierarchical note-addressing system from Niklas Luhmann's Zette
 | `1.2` | Second branch of note 1 |
 | `1.2a` | First child of 1.2 |
 | `1.2a3` | Third sub-branch of 1.2a |
-| `1.2a3c5` | Deep nesting |
+| `1.2a3aa` | 27th subbranch of 1.2a3 |
+| `1.2a3aa55| 55th sub branch of 1.2a3aa |
+
+Note how after the root note and the period, the numbers and letter alternate. 
+The numbers can contain multiple digits and there can be multiple letters.
+No further periods or other symbols are allowed.
 
 ## Features
 
