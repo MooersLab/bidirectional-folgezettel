@@ -1,0 +1,11 @@
+{
+  "parentLinkDescription": "Parent note",
+  "childLinkDescription": null,
+  "backlinkHeading": "Parent Note",
+  "forwardLinkHeading": "Child Notes",
+  "folgezettelRegex": "([0-9]+(?:[.][0-9]+)*(?:[a-z]+(?:[0-9]+)?)*)",
+  "autoProcessNewNotes": true,
+  "showNotifications": true,
+  "autoBidirectionalLinks": true,
+  "crossLinkHeading": "Related Notes"
+}
