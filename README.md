@@ -160,14 +160,9 @@ bidirectional-folgezettel/
 
 |Version      | Changes                                                                                                                                    | Date                 |
 |:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
-| Version 0.1 |  Extensive edits of the README.md.                                                                        | 2026 January 15           |
+| Version 0.1 |  Extensive edits of the README.md.                                                                                                         | 2026 January 15           |
 
 ## Funding
 - NIH: R01 CA242845, R01 AI088011
 - NIH: P30 CA225520 (PI: R. Mannel); P30GM145423 (PI: A. West)
 
-
-
----
-
-<p align="center">Made with ❤️ for the Zettelkasten community</p>
