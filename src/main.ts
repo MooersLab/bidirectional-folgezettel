@@ -487,6 +487,20 @@ export default class BidirectionalFolgezettelPlugin extends Plugin {
     }
 
     /**
+     * Determine if a parent address ends with a letter or number.
+     * Returns 'letter' if ends with letter, 'number' if ends with number.
+     */
+    getLastSegmentType(address: string): 'letter' | 'number' | null {
+        const parsed = this.parseAddress(address);
+        if (!parsed || parsed.segments.length === 0) {
+            return null;
+        }
+
+        const lastSegment = parsed.segments[parsed.segments.length - 1];
+        return typeof lastSegment === 'string' ? 'letter' : 'number';
+    }
+
+    /**
      * Get existing children of a note by address.
      */
     getChildrenOf(address: string): string[] {
@@ -508,31 +522,60 @@ export default class BidirectionalFolgezettelPlugin extends Plugin {
 
     /**
      * Suggest the next child address for a given parent address.
+     * Follows folgezettel alternation rules:
+     * - If parent ends with number, child ends with letter (1.2 -> 1.2a)
+     * - If parent ends with letter, child ends with number (1.2a -> 1.2a1)
      */
     suggestNextChild(parentAddress: string): string {
         const children = this.getChildrenOf(parentAddress);
+        const lastSegmentType = this.getLastSegmentType(parentAddress);
 
-        if (children.length === 0) {
-            return parentAddress + 'a';
-        }
+        if (lastSegmentType === 'letter') {
+            // Parent ends with letter, so child must end with number
+            if (children.length === 0) {
+                return parentAddress + '1';
+            }
 
-        // Find the highest letter suffix among children
-        let maxLetters = '';
+            // Find the highest number suffix among children
+            let maxNumber = 0;
 
-        for (const child of children) {
-            const parsed = this.parseAddress(child);
-            if (!parsed) continue;
+            for (const child of children) {
+                const parsed = this.parseAddress(child);
+                if (!parsed) continue;
 
-            const lastSegment = parsed.segments[parsed.segments.length - 1];
-            if (typeof lastSegment === 'string') {
-                if (lastSegment > maxLetters) {
-                    maxLetters = lastSegment;
+                const lastSegment = parsed.segments[parsed.segments.length - 1];
+                if (typeof lastSegment === 'number') {
+                    if (lastSegment > maxNumber) {
+                        maxNumber = lastSegment;
+                    }
                 }
             }
-        }
 
-        const nextLetters = this.nextLetterSequence(maxLetters);
-        return parentAddress + nextLetters;
+            return parentAddress + (maxNumber + 1);
+        } else {
+            // Parent ends with number (or is root), so child must end with letter
+            if (children.length === 0) {
+                return parentAddress + 'a';
+            }
+
+            // Find the highest letter suffix among children
+            let maxLetters = '';
+
+            for (const child of children) {
+                const parsed = this.parseAddress(child);
+                if (!parsed) continue;
+
+                const lastSegment = parsed.segments[parsed.segments.length - 1];
+                if (typeof lastSegment === 'string') {
+                    if (lastSegment > maxLetters) {
+                        maxLetters = lastSegment;
+                    }
+                }
+            }
+
+            const nextLetters = this.nextLetterSequence(maxLetters);
+            return parentAddress + nextLetters;
+        }
     }
 
     /**
