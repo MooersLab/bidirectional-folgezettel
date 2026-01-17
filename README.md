@@ -1,4 +1,4 @@
-# Bidirectional Folgezettel Plugin for Obisidian
+# Bidirectional Folgezettel Plugin for Obsidian
 
 ![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
