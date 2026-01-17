@@ -1,12 +1,12 @@
-# Bidirectional Folgezettel Plugin
+# Bidirectional Folgezettel Plugin for Obisidian
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.1&color=brightcolor)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 Automatic folgezettel backlink generation for Obsidian notes with bidirectional cross-linking. This plugin is a TypeScript translation of the `org-roam-folgezettel.el` Emacs package by Blaine Mooers.
 
 ## What is Folgezettel?
 
-Folgezettel is a hierarchical note-addressing system from Niklas Luhmann's Zettelkasten methodology. Notes receive structured addresses like `1.2a3c5` that encode relationships:
+Folgezettel is a hierarchical note-addressing system derived from Niklas Luhmann's Zettelkasten methodology. This variant indexing system is computer filename friendly. Notes receive structured addresses like `1.2a3c5` that encode relationships:
 
 | Address | Meaning |
 |---------|---------|
@@ -14,7 +14,12 @@ Folgezettel is a hierarchical note-addressing system from Niklas Luhmann's Zette
 | `1.2` | Second branch of note 1 |
 | `1.2a` | First child of 1.2 |
 | `1.2a3` | Third sub-branch of 1.2a |
-| `1.2a3c5` | Deep nesting |
+| `1.2a3aa` | 27th subbranch of 1.2a3 |
+| `1.2a3aa55| 55th sub branch of 1.2a3aa |
+
+Note how after the root note and the period, the numbers and letter alternate. 
+The numbers can contain multiple digits and there can be multiple letters.
+No further periods or other symbols are allowed.
 
 ## Features
 
@@ -54,11 +59,11 @@ make install-plugin VAULT_PATH=/path/to/your/vault
 
 ### Commands
 
-| Command | Description |
-|---------|-------------|
-| **Add backlink to parent note** | Creates bidirectional link with parent |
-| **Create next child note** | Creates a new child note with suggested address |
-| **Suggest next child address** | Shows the next available child address |
+| Command | Description | Suggested keybinding |
+|---------|-------------|----------------------|
+| **Add backlink to parent note** | Creates bidirectional link with parent | Option-P |
+| **Create next child note** | Creates a new child note with suggested address | Option-C |
+| **Suggest next child address** | Shows the next available child address | Option-A |
 
 ### Keyboard Shortcuts
 
@@ -156,15 +161,13 @@ bidirectional-folgezettel/
 5. Push: `git push origin feature/name`
 6. Open a Pull Request
 
-## License
+## Update history
 
-MIT License - see [LICENSE](LICENSE) file.
+|Version      | Changes                                                                                                                                    | Date                 |
+|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
+| Version 0.1 |  Extensive edits of the README.md.                                                                                                         | 2026 January 15           |
 
-## Credits
+## Funding
+- NIH: R01 CA242845, R01 AI088011
+- NIH: P30 CA225520 (PI: R. Mannel); P30GM145423 (PI: A. West)
 
-- **Original Author**: Blaine Mooers - [`org-roam-folgezettel.el`](https://github.com/MooersLab/org-roam-folgezettel)
-- **Inspiration**: Niklas Luhmann's Zettelkasten methodology
-
----
-
-<p align="center">Made with ❤️ for the Zettelkasten community</p>
