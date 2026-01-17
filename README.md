@@ -15,7 +15,7 @@ Folgezettel is a hierarchical note-addressing system derived from Niklas Luhmann
 | `1.2a` | First child of 1.2 |
 | `1.2a3` | Third sub-branch of 1.2a |
 | `1.2a3aa` | 27th subbranch of 1.2a3 |
-| `1.2a3aa55| 55th sub branch of 1.2a3aa |
+| `1.2a3aa55`| 55th sub branch of 1.2a3aa |
 
 Note how after the root note and the period, the numbers and letter alternate. 
 The numbers can contain multiple digits and there can be multiple letters.
