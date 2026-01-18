@@ -1,6 +1,6 @@
-# Bidirectional Folgezettel Plugin for Obisidian
+# Bidirectional Folgezettel Plugin for Obsidian
 
-![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 Automatic folgezettel backlink generation for Obsidian notes with bidirectional cross-linking. This plugin is a TypeScript translation of the `org-roam-folgezettel.el` Emacs package by Blaine Mooers.
 
@@ -15,10 +15,10 @@ Folgezettel is a hierarchical note-addressing system derived from Niklas Luhmann
 | `1.2a` | First child of 1.2 |
 | `1.2a3` | Third sub-branch of 1.2a |
 | `1.2a3aa` | 27th subbranch of 1.2a3 |
-| `1.2a3aa55| 55th sub branch of 1.2a3aa |
+| `1.2a3aa55`| 55th sub branch of 1.2a3aa |
 
 Note how after the root note and the period, the numbers and letter alternate. 
-The numbers can contain multiple digits and there can be multiple letters.
+The numbers can contain multiple digits and there can be multiple letters after `z` has been used.
 No further periods or other symbols are allowed.
 
 ## Features
@@ -166,6 +166,7 @@ bidirectional-folgezettel/
 |Version      | Changes                                                                                                                                    | Date                 |
 |:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
 | Version 0.1 |  Extensive edits of the README.md.                                                                                                         | 2026 January 15           |
+| Version 0.2 |  Fixed bug in child note index.                                                                                                         | 2026 January 16           |
 
 ## Funding
 - NIH: R01 CA242845, R01 AI088011
