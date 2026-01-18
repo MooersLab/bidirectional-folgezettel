@@ -422,4 +422,77 @@ describe('BidirectionalFolgezettelPlugin', () => {
             expect(plugin.settings.childLinkDescription).toBe('Child');
         });
     });
+
+    // ========================================================================
+    // Find File By Address Tests
+    // ========================================================================
+
+    describe('findFileByAddress', () => {
+        it('should find file by exact address', () => {
+            mockVault.addTestFile('1.2a Some Note.md');
+            mockVault.addTestFile('1.2b Another Note.md');
+
+            const file = plugin.findFileByAddress('1.2a');
+            expect(file).not.toBeNull();
+            expect(file?.basename).toBe('1.2a Some Note');
+        });
+
+        it('should return null when address does not exist', () => {
+            mockVault.addTestFile('1.2a Some Note.md');
+
+            const file = plugin.findFileByAddress('1.2b');
+            expect(file).toBeNull();
+        });
+
+        it('should not match partial addresses', () => {
+            mockVault.addTestFile('1.2a1 Note.md');
+
+            // Looking for 1.2a should not find 1.2a1
+            const file = plugin.findFileByAddress('1.2a');
+            expect(file).toBeNull();
+        });
+    });
+
+    // ========================================================================
+    // Validate Address Tests
+    // ========================================================================
+
+    describe('validateAddress', () => {
+        it('should return valid for unused address', () => {
+            const result = plugin.validateAddress('1.2a');
+            expect(result.isValid).toBe(true);
+            expect(result.isDuplicate).toBe(false);
+            expect(result.existingFile).toBeNull();
+        });
+
+        it('should detect duplicate address', () => {
+            mockVault.addTestFile('1.2a Existing Note.md');
+
+            const result = plugin.validateAddress('1.2a');
+            expect(result.isValid).toBe(true);
+            expect(result.isDuplicate).toBe(true);
+            expect(result.existingFile).not.toBeNull();
+            expect(result.existingFile?.basename).toBe('1.2a Existing Note');
+        });
+
+        it('should return invalid for malformed address', () => {
+            const result = plugin.validateAddress('abc');
+            expect(result.isValid).toBe(false);
+            expect(result.isDuplicate).toBe(false);
+        });
+
+        it('should return invalid for empty address', () => {
+            const result = plugin.validateAddress('');
+            expect(result.isValid).toBe(false);
+            expect(result.isDuplicate).toBe(false);
+        });
+
+        it('should include file path in message for duplicates', () => {
+            mockVault.addTestFile('folder/1.2a Note.md');
+
+            const result = plugin.validateAddress('1.2a');
+            expect(result.message).toContain('1.2a');
+            expect(result.message).toContain('folder/1.2a Note.md');
+        });
+    });
 });
