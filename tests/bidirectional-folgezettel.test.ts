@@ -315,6 +315,71 @@ describe('BidirectionalFolgezettelPlugin', () => {
             // Parent ends with letter, so child should be number
             expect(plugin.suggestNextChild('1.2a3b')).toBe('1.2a3b1');
         });
+
+        // Root node tests
+        it('should suggest dot-number for root node first child', () => {
+            expect(plugin.suggestNextChild('7')).toBe('7.1');
+            expect(plugin.suggestNextChild('1')).toBe('1.1');
+            expect(plugin.suggestNextChild('42')).toBe('42.1');
+        });
+
+        it('should suggest next dot-number when root node has children', () => {
+            mockVault.addTestFile('7 Root Note.md');
+            mockVault.addTestFile('7.1 First Child.md');
+
+            const next = plugin.suggestNextChild('7');
+            expect(next).toBe('7.2');
+        });
+
+        it('should find highest number among root node children', () => {
+            mockVault.addTestFile('7 Root Note.md');
+            mockVault.addTestFile('7.1 Child 1.md');
+            mockVault.addTestFile('7.3 Child 3.md');
+            mockVault.addTestFile('7.5 Child 5.md');
+
+            const next = plugin.suggestNextChild('7');
+            expect(next).toBe('7.6');
+        });
+
+        it('should handle root node with many children', () => {
+            mockVault.addTestFile('1 Root.md');
+            for (let i = 1; i <= 10; i++) {
+                mockVault.addTestFile(`1.${i} Child ${i}.md`);
+            }
+
+            const next = plugin.suggestNextChild('1');
+            expect(next).toBe('1.11');
+        });
+    });
+
+    // ========================================================================
+    // Is Root Node Tests
+    // ========================================================================
+
+    describe('isRootNode', () => {
+        it('should return true for single number addresses', () => {
+            expect(plugin.isRootNode('1')).toBe(true);
+            expect(plugin.isRootNode('7')).toBe(true);
+            expect(plugin.isRootNode('42')).toBe(true);
+            expect(plugin.isRootNode('100')).toBe(true);
+        });
+
+        it('should return false for addresses with children', () => {
+            expect(plugin.isRootNode('1.1')).toBe(false);
+            expect(plugin.isRootNode('1.2')).toBe(false);
+            expect(plugin.isRootNode('7.1')).toBe(false);
+        });
+
+        it('should return false for addresses with letters', () => {
+            expect(plugin.isRootNode('1a')).toBe(false);
+            expect(plugin.isRootNode('1.2a')).toBe(false);
+            expect(plugin.isRootNode('7.1a')).toBe(false);
+        });
+
+        it('should return false for invalid addresses', () => {
+            expect(plugin.isRootNode('')).toBe(false);
+            expect(plugin.isRootNode('abc')).toBe(false);
+        });
     });
 
     // ========================================================================
@@ -397,6 +462,29 @@ describe('BidirectionalFolgezettelPlugin', () => {
             const inserted = await plugin.insertLinkUnderHeading(file as any, linkedFile as any, 'Related Notes', 'Test');
 
             expect(inserted).toBe(false);
+        });
+
+        it('should omit parentheses when description is empty', async () => {
+            const file = mockVault.addTestFile('test.md', '# Title\n\n## Related Notes\n');
+            const linkedFile = new TFile('linked.md');
+
+            await plugin.insertLinkUnderHeading(file as any, linkedFile as any, 'Related Notes', '');
+
+            const content = mockVault.getFileContent('test.md');
+            expect(content).toContain('- [[linked]]');
+            expect(content).not.toContain('()');
+            expect(content).not.toContain('( )');
+        });
+
+        it('should omit parentheses when description is whitespace only', async () => {
+            const file = mockVault.addTestFile('test2.md', '# Title\n\n## Related Notes\n');
+            const linkedFile = new TFile('linked.md');
+
+            await plugin.insertLinkUnderHeading(file as any, linkedFile as any, 'Related Notes', '   ');
+
+            const content = mockVault.getFileContent('test2.md');
+            expect(content).toContain('- [[linked]]');
+            expect(content).not.toContain('()');
         });
     });
 
