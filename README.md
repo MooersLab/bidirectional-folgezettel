@@ -1,6 +1,6 @@
 # Bidirectional Folgezettel Plugin for Obsidian
 
-![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.2&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.3&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 Automatic folgezettel backlink generation for Obsidian notes with bidirectional cross-linking. This plugin is a TypeScript translation of the `org-roam-folgezettel.el` Emacs package by Blaine Mooers.
 
@@ -167,7 +167,7 @@ bidirectional-folgezettel/
 |:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|
 | Version 0.1 |  Extensive edits of the README.md.                                                                                                         | 2026 January 15           |
 | Version 0.2 |  Fixed bug in child note index.                                                                                                         | 2026 January 16           |
-
+| Version 0.3 |  Fixed bug in child note index when parent is a root node.                                                                                                   | 2026 January 18    |
 ## Funding
 - NIH: R01 CA242845, R01 AI088011
 - NIH: P30 CA225520 (PI: R. Mannel); P30GM145423 (PI: A. West)
