@@ -95,12 +95,14 @@ When enabled (default), the plugin automatically:
 
 There is a core package called template. Associated with it as a icon that appears in the left panel. When you click on this icon you can select from a template folder in your vault whichever template you wish to use upon the creation of the next note. This core package does not retain memory of the last selection or does it allow you to set a default template.
 
-The problem of setting a default template is solved by the community package [Templater](https://silentvoid13.github.io/Templater/). It utilizes its own [template language](https://silentvoid13.github.io/Templater/) for creating templates. You'll have to turn off the core template package to use this package. Under the settings for this package, you can set the default template. 
+The problem of setting a default template is solved by the community package [Templater](https://silentvoid13.github.io/Templater/). It utilizes its own [template language](https://silentvoid13.github.io/Templater/) for creating templates. You'll have to turn off the core template package to use this package. See this blog post for the [installation steps](https://jeremiah-roise.github.io/posts/obsidiandefaultnotetemplate/). The tricky part is step 9. The typical configuration would look like the one below. Under the settings for this package, you can set the default template. 
+
+<img width="754" height="252" alt="templaterSetup" src="https://github.com/user-attachments/assets/d6cb15c0-ca8a-415a-a79c-9582f19d918a" />
+
 
 Before you use this package, you probably have to think deep and hard about what kind of trouble you may be causing yourself downstream if you're going to export your notes to a different format for use in a different zettelkasten software. You might want to work out the workflow require required. At a minimum, you should try running pandoc to convert to the file format required by the target software that you may migrate to. You might have to write your own script to strip out some of the code embedded in the note.
 
 
-<img width="754" height="252" alt="templaterSetup" src="https://github.com/user-attachments/assets/d6cb15c0-ca8a-415a-a79c-9582f19d918a" />
 
 
 
