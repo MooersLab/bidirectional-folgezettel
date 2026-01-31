@@ -6,13 +6,43 @@ Automatic folgezettel backlink generation for Obsidian notes with bidirectional 
 This plugin is a TypeScript translation of the `org-roam-folgezettel.el` Emacs package by Blaine Mooers.
 
 ## What problems are addressed by this plugin?
+Electronic zettelkastens rely on reciprocal hyperlinks to relate parent and child notes.
+The manual insertion of these links is error-prone and time-consuming.
+This package provides true automation for creating these links by leveraging the parent-child relationship defined in the indexing system.
+You do not need to click a button to add the links; they are added automatically.
 
 ### True automation of bidirectional linking
-Electronic zettelkastens rely on reciprocal hyperlinks to relate parent and child notes.
-The manual insertion of these links is error prone and time-consuming.
-This package provides true automation of the creation of these links by relying on the parent child relationship specified in the indexing system.
-You do not have to click a button to add the links; it happens automatically.
+Most electronic zettelkastens rely either on timestamps or a database ID to identify each unique note.
+This approach is hopeless if one wants to print out their zettels to store them in a paper-based zettelkasten.
+Fans of the paper-based approach may object that you should write these notes by hand to better integrate the information into your memory.
+This may be true, but more frequent perusal of the paper zettelkasten may be compensatory and possibly more effective in the long term.
+Often, there is just not enough time available to rewrite the notes by hand.
 
+There is no rule against mixing handwritten and printed notes together.
+The inclusion of the folgezettel index in the title tells the user where to store the note.
+Paper-based zettelkastens rely on the folgezettel index (also called the Luhmann-style index or the Scheper index) to specify the linear order of note storage.
+There is a one-to-one mapping between the zettelkasten graph and the order in which the notes are stored.
+
+This approach supports a hybrid zettelkasten, with part electronic and part paper-based.
+Of course, it also supports a mirrored zettelkasten in both paper and electronic form.
+
+You can print a note on US letter-size paper, fold it in half with the title on the outside, and store it in this zettelkasten.
+This folded paper corresponds to A5-sized paper.
+Luhmann used the smaller A6-sized paper.
+
+If the note spans multiple pages, as may be the case with a structure note, keyword note, structure note, or hub note, you can fold the pages in half together.
+You can also save paper and space by printing on both sides, resulting in a booklet with two pages per side.
+For example, an eight-page note would span both sides of two sheets of US letter paper.
+The text will be rotated by 90°, so you will need to write the index across the top of the outside side of the folded paper.
+I favor this approach over index cards because it provides more space and because US Letter printer paper is cheaper and more readily available.
+This more practical approach reduces the friction of adding new notes to your paper-based zettelkasten.
+
+Obsidian has a fantastic infinite canvas for displaying notes and arranging them in all kinds of configurations.
+The ability to print out the notes opens up the opportunity to work with paper versions on a large tabletop or a corkboard.
+Sometimes changing the context from electronic format to a physical format can stimulate the mind.
+This alternate physical approach to arranging notes is useful when utilizing the notes in the assembly of a manuscript.
+You could use the canvas to join all those notes that you wish to print out.
+This could be useful for one-off purposes like the assembly to manuscript where you may throw away the paper notes when you are done.
 ### Support for export to a paper-based zettelkasten
 Most electronic zettelkastens rely either on timestamps or a database ID to identify each unique note.
 This approach is hopeless if one wants to print out their zettels to store them in a paper-based zettelkasten.
