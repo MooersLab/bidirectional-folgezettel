@@ -14,47 +14,37 @@ This package provides true automation of the creation of these links by relying 
 You do not have to click a button to add the links; it happens automatically.
 
 ### Support for export to a paper-based zettelkasten
-Most electronic zettelkastens relie either timestamps or a database ID to identify each unique note.
+Most electronic zettelkastens rely either on timestamps or a database ID to identify each unique note.
 This approach is hopeless if one wants to print out their zettels to store them in a paper-based zettelkasten.
-The fans of the paper-based approach may object that you should actually write out these notes by hand to incorporate the information more deeply into your memory.
-This may be true but more frequent perusal of the paper zettelkasten may be compensatory and possibly more effective in the long term.
-Often, there is just not enough time available rewrite the notes by hand.
+Fans of the paper-based approach may object that you should write these notes by hand to better integrate the information into your memory.
+This may be true, but more frequent perusal of the paper zettelkasten may be compensatory and possibly more effective in the long term.
+Often, there is just not enough time available to rewrite the notes by hand.
 
 There is no rule against mixing handwritten and printed notes together.
 The inclusion of the folgezettel index in the title tells the user where to store the note.
-Paper-based zettelkastens rely on the folgezettel index (or Luhmann-style index or the Scheper index) to specifiy the linear order of the storage of the notes.
-There is a one-to-one mapping between the graph of the zettelkasten and the order of storage.
+Paper-based zettelkastens rely on the folgezettel index (also called the Luhmann-style index or the Scheper index) to specify the linear order of note storage.
+There is a one-to-one mapping between the zettelkasten graph and the order in which the notes are stored.
 
-This approach supports a hybrid zettelkasten where part of it is electronic and part of its paper-based.
+This approach supports a hybrid zettelkasten, with part electronic and part paper-based.
 Of course, it also supports a mirrored zettelkasten in both paper and electronic form.
 
-You can print out a note on us letter size paper and folded in half with the title on the outside to store the note in this zettelkasten.
-This folded paper corresponds to A5 size paper.
-Luhmann used the smaller A6 size paper.
+You can print a note on US letter-size paper, fold it in half with the title on the outside, and store it in this zettelkasten.
+This folded paper corresponds to A5-sized paper.
+Luhmann used the smaller A6-sized paper.
 
-If the note spans multiple pages as maybe the case with a structure note, keyword note, structure note, or hub note, you can fold the pages in half together.
-You can also save paper and space by printing on both sides so the paper in booklet format with two pages per side of the paper.
-For example, and eight page note would span both sides of two sheets of US letter paper.
+If the note spans multiple pages, as may be the case with a structure note, keyword note, structure note, or hub note, you can fold the pages in half together.
+You can also save paper and space by printing on both sides, resulting in a booklet with two pages per side.
+For example, an eight-page note would span both sides of two sheets of US letter paper.
 The text will be rotated by 90°, so you will need to write the index across the top of the outside side of the folded paper.
-I favor this approach over the use of index cards because of the greater available space and because us letter printer paper is cheaper and more readily available.
+I favor this approach over index cards because it provides more space and because US Letter printer paper is cheaper and more readily available.
 This more practical approach reduces the friction of adding new notes to your paper-based zettelkasten.
 
 Obsidian has a fantastic infinite canvas for displaying notes and arranging them in all kinds of configurations.
 The ability to print out the notes opens up the opportunity to work with paper versions on a large tabletop or a corkboard.
 Sometimes changing the context from electronic format to a physical format can stimulate the mind.
 This alternate physical approach to arranging notes is useful when utilizing the notes in the assembly of a manuscript.
-You could use the canvas to gather together all those notes that you wish to print out.
+You could use the canvas to join all those notes that you wish to print out.
 This could be useful for one-off purposes like the assembly to manuscript where you may throw away the paper notes when you are done.
-
-## What is Folgezettel?
-
-Folgezettel is a hierarchical note-addressing system derived from Niklas Luhmann's Zettelkasten methodology. 
-This variant indexing system is computer-filename friendly. 
-To the right of the period, the code varies from digits to letters and back again at each level in the heirarchy.
-The levels in the heirarchy refect the addition of the order of notes but have no semantic meaning.
-This hierachy is open because any note in the sequence of notes can support branching via child notes at any point in time.
-This open heirarchy allows for a mix of order and disorder.
-The order supports navigation of the notes; the disorder supports the discovery of unexpected relationships.
 
 Notes receive structured addresses like `1.2a3c5` that encode the parent note-child note relationships:
 
