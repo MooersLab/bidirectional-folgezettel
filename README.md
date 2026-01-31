@@ -244,7 +244,8 @@ bidirectional-folgezettel/
 | Version 0.1 |  Extensive edits of the README.md.                                                                                                         | 2026 January 15    |
 | Version 0.2 |  Fixed bug in child note index.                                                                                                            | 2026 January 16   |
 | Version 0.3 |  Fixed bug in child note index when parent is a root node.                                                                                 | 2026 January 20    |
-| Version 0.4 |  Added notes to README.md on how to set a defualt template file using the community package Templater.                                     | 2026 January 31    |
+| Version 0.4 |  Added notes to README.md on problems addressed by this package.                                                                           | 2026 January 31    |
+
 ## Funding
 - NIH: R01 CA242845, R01 AI088011
 - NIH: P30 CA225520 (PI: R. Mannel); P30GM145423 (PI: A. West)
