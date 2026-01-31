@@ -39,12 +39,12 @@ The text will be rotated by 90°, so you will need to write the index across the
 I favor this approach over index cards because it provides more space and because US Letter printer paper is cheaper and more readily available.
 This more practical approach reduces the friction of adding new notes to your paper-based zettelkasten.
 
-Obsidian has a fantastic infinite canvas for displaying notes and arranging them in all kinds of configurations.
+Obsidian offers a fantastic, infinite canvas for displaying and organizing notes in all kinds of configurations.
 The ability to print out the notes opens up the opportunity to work with paper versions on a large tabletop or a corkboard.
-Sometimes changing the context from electronic format to a physical format can stimulate the mind.
-This alternate physical approach to arranging notes is useful when utilizing the notes in the assembly of a manuscript.
-You could use the canvas to join all those notes that you wish to print out.
-This could be useful for one-off purposes like the assembly to manuscript where you may throw away the paper notes when you are done.
+Sometimes changing the context from an electronic format to a physical format can stimulate the mind.
+This alternative physical approach to arranging notes is useful when using the notes in assembling a manuscript.
+You can use the canvas to combine all the notes you want to print.
+This could be useful for one-off tasks, such as assembling a manuscript, where you may discard the paper notes when you are done.
 
 Notes receive structured addresses like `1.2a3c5` that encode the parent note-child note relationships:
 
