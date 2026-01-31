@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.4&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 Automatic folgezettel backlink generation for Obsidian notes with bidirectional cross-linking. 
-This plugin is a TypeScript translation of the `org-roam-folgezettel.el` Emacs package by Blaine Mooers.
+This plugin is a TypeScript translation of the `folgezettel-org-roam.el` Emacs package by Blaine Mooers.
 
 ## What problems are addressed by this plugin?
 
