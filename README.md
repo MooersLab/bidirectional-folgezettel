@@ -69,13 +69,13 @@ No further periods or other symbols are allowed.
 - **Child Suggestions**: Suggests the next available child address
 - **Keyboard Shortcuts**: All commands are available via hotkeys
 - **Links**: Works with either WikiLinks or Markdown links.
-
+ 
 ## Best of both worlds
 
-If you have Emacs compiled with xwidgets and have installed the package grip, you can edit your Obsidian notes inside of Emacs in one buffer and enjoy a live preview in the adjacent window.
+If you have Emacs compiled with xwidgets and have installed the package [grip-mode](https://github.com/seagle0128/grip-mode/tree/master), you can edit your Obsidian notes inside of Emacs in one buffer and enjoy a live preview in the adjacent buffer.
 Your notes will need the Markdown-style links (e.g. `[description](URL)` ) to be able to navigate from file to file.
 
-Why would you do this?
+### Why would you do this?
 
 - Enjoy editing the notes with the full power of your Emacs configuration with favorite key bindings, packages, home-made functions, and code snippets.
 - Use whisper.el to carry out dictation of your notes.
