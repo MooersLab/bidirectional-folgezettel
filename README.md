@@ -1,6 +1,6 @@
 # Bidirectional Folgezettel Plugin for Obsidian
 
-![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.4&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=bidirectional-folgezettel&message=0.4.1&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 Automatic folgezettel backlink generation for Obsidian notes with bidirectional cross-linking. 
 This plugin is a TypeScript translation of the `folgezettel-org-roam.el` Emacs package by Blaine Mooers.
@@ -33,16 +33,16 @@ This folded paper corresponds to A5-sized paper.
 Luhmann used the smaller A6-sized paper.
 
 If the note spans multiple pages, as may be the case with a structure note, keyword note, structure note, or hub note, you can fold the pages in half together.
-You can also save paper and space by printing on both sides, resulting in a booklet with two pages per side.
+You can also save paper and space by printing two pages to a side, double-sided, resulting in a booklet with two pages per side.
 For example, an eight-page note would span both sides of two sheets of US letter paper.
 The text will be rotated by 90°, so you will need to write the index across the top of the outside side of the folded paper.
 I favor this approach over index cards because it provides more space and because US Letter printer paper is cheaper and more readily available.
-This more practical approach reduces the friction of adding new notes to your paper-based zettelkasten.
+This practical approach reduces the friction of adding new notes to your paper-based zettelkasten.
 
 Obsidian offers a fantastic, infinite canvas for displaying and organizing notes in all kinds of configurations.
 The ability to print out the notes opens up the opportunity to work with paper versions on a large tabletop or a corkboard.
-Sometimes changing the context from an electronic format to a physical format can stimulate the mind.
-This alternative physical approach to arranging notes is useful when using the notes in assembling a manuscript.
+Sometimes changing from an electronic to a physical format can stimulate the mind.
+This alternative physical approach to organizing notes is useful when using them to assemble a manuscript.
 You can use the canvas to combine all the notes you want to print.
 This could be useful for one-off tasks, such as assembling a manuscript, where you may discard the paper notes when you are done.
 
